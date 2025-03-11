@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- Trainee Table -->
+    <mxCell id="trainee" value="Trainee" style="shape=swimlane;" vertex="1" parent="1">
+      <mxGeometry x="100" y="100" width="160" height="180" as="geometry" />
+    </mxCell>
+    <mxCell id="trainee_fields" value="TraineeID (PK)&#xa;TraineeFullName&#xa;TraineeAddress&#xa;TraineeDOB&#xa;TraineePhoneNumber&#xa;TraineeEmail" vertex="1" parent="trainee">
+      <mxGeometry as="geometry" />
+    </mxCell>
+
+    <!-- Registered Trainee Table -->
+    <mxCell id="registered_trainee" value="Registered Trainee" style="shape=swimlane;" vertex="1" parent="1">
+      <mxGeometry x="300" y="100" width="160" height="80" as="geometry" />
+    </mxCell>
+    <mxCell id="registered_trainee_fields" value="TraineeID (PK, FK)&#xa;RegisterDate" vertex="1" parent="registered_trainee">
+      <mxGeometry as="geometry" />
+    </mxCell>
+    
+    <!-- Guest Trainee Table -->
+    <mxCell id="guest_trainee" value="Guest Trainee" style="shape=swimlane;" vertex="1" parent="1">
+      <mxGeometry x="300" y="200" width="160" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="guest_trainee_fields" value="TraineeID (PK, FK)" vertex="1" parent="guest_trainee">
+      <mxGeometry as="geometry" />
+    </mxCell>
+
+    <!-- Booking Table -->
+    <mxCell id="booking" value="Booking" style="shape=swimlane;" vertex="1" parent="1">
+      <mxGeometry x="100" y="300" width="160" height="120" as="geometry" />
+    </mxCell>
+    <mxCell id="booking_fields" value="BookingID (PK)&#xa;TraineeID (FK)&#xa;BookingDate&#xa;BookingTime&#xa;BookingStatus" vertex="1" parent="booking">
+      <mxGeometry as="geometry" />
+    </mxCell>
+    
+    <!-- Instrument Table -->
+    <mxCell id="instrument" value="Instrument" style="shape=swimlane;" vertex="1" parent="1">
+      <mxGeometry x="300" y="300" width="200" height="180" as="geometry" />
+    </mxCell>
+    <mxCell id="instrument_fields" value="InstrumentID (PK)&#xa;InstrumentName&#xa;InstrumentMaterial&#xa;InstrumentMake&#xa;InstrumentModel&#xa;InstrumentColour&#xa;InstrumentSize&#xa;InstrumentDescription" vertex="1" parent="instrument">
+      <mxGeometry as="geometry" />
+    </mxCell>
+
+    <!-- Trainer Table -->
+    <mxCell id="trainer" value="Trainer" style="shape=swimlane;" vertex="1" parent="1">
+      <mxGeometry x="550" y="100" width="200" height="180" as="geometry" />
+    </mxCell>
+    <mxCell id="trainer_fields" value="TrainerID (PK)&#xa;TrainerFullName&#xa;TrainerAddress&#xa;TrainerDOB&#xa;TrainerPhoneNumber&#xa;TrainerEmail&#xa;TrainerEmploymentDate" vertex="1" parent="trainer">
+      <mxGeometry as="geometry" />
+    </mxCell>
+    
+    <!-- Course Table -->
+    <mxCell id="course" value="Course" style="shape=swimlane;" vertex="1" parent="1">
+      <mxGeometry x="550" y="300" width="200" height="140" as="geometry" />
+    </mxCell>
+    <mxCell id="course_fields" value="CourseID (PK)&#xa;CourseName&#xa;CourseDescription&#xa;CourseLevel&#xa;CourseFee&#xa;CourseDuration&#xa;TrainerID (FK)" vertex="1" parent="course">
+      <mxGeometry as="geometry" />
+    </mxCell>
+    
+    <!-- Payment Table -->
+    <mxCell id="payment" value="Payment" style="shape=swimlane;" vertex="1" parent="1">
+      <mxGeometry x="100" y="500" width="200" height="120" as="geometry" />
+    </mxCell>
+    <mxCell id="payment_fields" value="PaymentID (PK)&#xa;BookingID (FK)&#xa;PaymentAmount&#xa;PaymentDate&#xa;PaymentTime&#xa;PaymentNote" vertex="1" parent="payment">
+      <mxGeometry as="geometry" />
+    </mxCell>
+
+    <!-- Bank Table -->
+    <mxCell id="bank" value="Bank" style="shape=swimlane;" vertex="1" parent="1">
+      <mxGeometry x="350" y="500" width="200" height="140" as="geometry" />
+    </mxCell>
+    <mxCell id="bank_fields" value="BankID (PK)&#xa;BankName&#xa;BankAccountName&#xa;BankBSBNumber&#xa;BankAccountNumber&#xa;BankDescription&#xa;BankBalance" vertex="1" parent="bank">
+      <mxGeometry as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>
